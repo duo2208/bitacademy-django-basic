@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'helloword',
+    'emaillist01',
+    'guestbook01',
 ]
 
 MIDDLEWARE = [

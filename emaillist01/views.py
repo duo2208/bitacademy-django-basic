@@ -16,7 +16,5 @@ def add(request):
     email = request.POST["email"]
 
     models.insert(firstname, lastname, email)
-
-    results = models.findAll()
-    data = { 'emaillist_list' : results }
+    
     return redirect('emaillist01')

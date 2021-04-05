@@ -19,4 +19,7 @@ urlpatterns = [
     path('emaillist01/add', emaillist01.views.add, name='emaillist01/add'),
 
     path('guestbook01/', guestbook01.views.index, name='guestbook01'),
+    path('guestbook01/add', guestbook01.views.add, name='guestbook01/add'),
+    path('guestbook01/delete', guestbook01.views.delete, name='guestbook01/delete'),
+    path('guestbook01/deleteform', guestbook01.views.deleteform, name='guestbook01/deleteform'),
 ]

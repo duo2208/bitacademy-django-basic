@@ -5,19 +5,19 @@
 </head>
 
 <body>
-	<form method="/guestbook1/delete" action="post">
-	{% csrf_token %}
-	<input type='hidden' name="no" value="{{no_data}}">
-	<table>
-		<tr>
-			<td>비밀번호</td>
-			<td><input type="password2" name="password2"></td>
-			<td><input type="submit" value="입력"></td>
-		</tr>
-		<tr>
-			<td><a href="/">메인으로 돌아가기</a></td>
-		</tr>
-	</table>
+	<form method="post" action="/guestbook01/delete">
+		{% csrf_token %}
+		<input type="hidden" name="no" value="{{ request.GET.no }}">
+		<table>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" name="password"></td>
+				<td><input type="submit" value="삭제"></td>
+			</tr>
+			<tr>
+				<td><a href="/guestbook01">메인으로 돌아가기</a></td>
+			</tr>
+		</table>
 	</form>
 
 </body>

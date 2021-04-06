@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from guestbook01 import models
 
@@ -6,9 +7,6 @@ def index(request):
     results = models.findAll()
     data = { 'guestbook_list' : results }
     return render(request, 'guestbook01/index.html', data)
-
-def deleteform(request):
-    return render(request, 'guestbook01/deleteform.html', no_data)
 
 def add(request):
     name = request.POST['name']
@@ -19,10 +17,13 @@ def add(request):
 
     return redirect('guestbook01')
 
-def delete(request):
-    no = request.POST['no_data']
-    password = request.POST['password2']
+def deleteform(request):
+    return render(request, 'guestbook01/deleteform.html')
 
-    models.removeby_no_and_pass(no, passowrd2)
-    
+def delete(request):
+    no = request.POST['no']
+    password = request.POST['password']
+
+    models.removeby_no_and_pass(no, password)
+
     return redirect('guestbook01')

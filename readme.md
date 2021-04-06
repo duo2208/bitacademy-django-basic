@@ -118,4 +118,14 @@ INSTALLED_APPS = [
 ----------------------------------------------------------------------------
 
 ### 11. url 등록하기: (urls.py)
+### 12. views.py 연결하기 : (views.py)
 
+----------------------------------------------------------------------------
+
+### template filter
+- linebreaksbr : \ 개행문자를 html 상의 <br>로 적용
+- mathfilters : 1) pip install django-mathfilters
+                2) INSTALLED_APPS = [
+                    ‘mathfilters',
+                ]
+              : 3) 필요한 곳에 import or load

@@ -129,3 +129,14 @@ INSTALLED_APPS = [
                     ‘mathfilters',
                 ]
               : 3) 필요한 곳에 import or load
+
+
+----------------------------------------------------------------------------
+
+### ORM
+1) models.py 안에 클래스 정의
+2) DB에 모델 반영하기
+```
+python manage.py makemigrations
+python manage.py migrate
+```

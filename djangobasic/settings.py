@@ -29,7 +29,9 @@ INSTALLED_APPS = [
     'mathfilters',
     'helloword',
     'emaillist01',
+    'emaillist02',
     'guestbook01',
+    'guestbook02',
 ]
 
 MIDDLEWARE = [
